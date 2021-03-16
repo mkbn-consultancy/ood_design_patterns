@@ -1,0 +1,24 @@
+{
+    "version": "2.0.0",
+    "outDir": "\"${workspaceRoot}\\bin\"",
+    "tasks": [
+      {
+        "label": "makefile-build",
+        "type": "process",
+        "command": "nmake",
+        "args": [ "build" ]
+      },
+      {
+        "label": "makefile-clean",
+        "type": "process",
+        "command": "nmake",
+        "args": [ "clean" ]
+      },
+      {
+        "label": "makefile-rebuild",
+        "type": "process",
+         "command": "nmake",
+        "args": [ "rebuild" ]
+       }
+    ]
+  }
