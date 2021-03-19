@@ -1,11 +1,16 @@
 #pragma once
 
-#include "visitableImpl.h"
+#include "ivisitable.h"
+#include "nameImpl.h"
 #include <string>
 
-class Item : public VisitableImpl
+//forward declaration
+class IVisitor;
+
+class Item : public NameImpl, public IVisitable
 {
 public:
-    Item(const std::string& name) : VisitableImpl(name) {}
+    Item(const std::string& name) : NameImpl(name) {}
+
     virtual void accept(IVisitor*) override;
 };

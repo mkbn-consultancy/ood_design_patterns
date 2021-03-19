@@ -1,16 +1,17 @@
 #pragma once
 
-#include "visitableImpl.h"
+#include "ivisitable.h"
+#include "nameImpl.h"
 #include "order.h"
 #include <vector>
 
 // forward declaration
 class IVisitor;
 
-class Customer : public VisitableImpl
+class Customer : public NameImpl, public IVisitable
 {
 public:
-    Customer(const std::string& name) : VisitableImpl(name){}
+    Customer(const std::string& name) : NameImpl(name){}
     virtual void accept(IVisitor*) override;
     void addOrder(const Order& order);
 
