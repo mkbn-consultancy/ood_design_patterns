@@ -4,10 +4,14 @@
 #include "order.h"
 #include "generalReport.h"
 
+#include <string>
+
 #include <iostream>
 
 int main()
 {
+    std::string s;
+    
     Customer c1("Customer1");
     Order o1("order1");
     o1.addItem("item1");

@@ -1,24 +1,19 @@
 {
-    "version": "2.0.0",
-    "outDir": "\"${workspaceRoot}\\bin\"",
-    "tasks": [
-      {
-        "label": "makefile-build",
-        "type": "process",
-        "command": "nmake",
-        "args": [ "build" ]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "C/C++: g++.exe build active file",
+      "command": "C:\\Program Files\\mingw-w64_old\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
+      "args": ["-g", "${fileDirname}\\*.cpp", "-o", "${fileDirname}\\a.exe"],
+      "options": {
+        "cwd": "${workspaceFolder}"
       },
-      {
-        "label": "makefile-clean",
-        "type": "process",
-        "command": "nmake",
-        "args": [ "clean" ]
-      },
-      {
-        "label": "makefile-rebuild",
-        "type": "process",
-         "command": "nmake",
-        "args": [ "rebuild" ]
-       }
-    ]
-  }
+      "problemMatcher": ["$gcc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
