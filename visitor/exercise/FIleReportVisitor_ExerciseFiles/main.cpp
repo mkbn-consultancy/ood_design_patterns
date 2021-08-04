@@ -23,20 +23,6 @@ int main()
 	filesPool.push_back(&textFile3);
 
 	//get average duration of music files
-	double sum = 0;
-	int count = 0;
-	for(int i=0; i<filesPool.size(); ++i)
-	{
-		// if(typeid(filesPool[i])==typeid(TextFile)){
-		// 	//do nothing
-		// }
-		// else if(typeid(filesPool[i])==typeid(MP3File)){
-
-		// 	MP3File* p = dynamic_cast<MP3File*>(filesPool[i]);
-		// 	sum += p->getSongDuration();
-		// 	count++;
-		// }
-	}
 
 	//print the result:
 	
