@@ -9,6 +9,7 @@ class Item;
 class GeneralReportVisitor : public IVisitor
 {
 public:
+    virtual void visit(CustomersGroup*) override;
     virtual void visit(Customer*) override;
     virtual void visit(Order*) override;
     virtual void visit(Item*) override;

@@ -5,7 +5,8 @@
 
 #include <iostream>
 
-int main() {
+int main() 
+{
 	//two news-producers
 	EconomyNewsPublihser economyNP;
 	PoliticsNewsPublisher politicsNP;

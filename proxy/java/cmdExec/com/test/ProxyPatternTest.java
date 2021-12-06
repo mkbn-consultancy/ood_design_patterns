@@ -12,8 +12,8 @@ public class ProxyPatternTest {
 	public static void main(String[] args) {
 		System.out.println("\n---- command executor test ----");
 		System.out.println("[main] creating a user...");
-		CommandExecutor executor = new CommandExecutorProxy("admin","wrong_password");
-//		CommandExecutor executor = new CommandExecutorImpl();
+		// CommandExecutor executor = new CommandExecutorProxy("admin","wrong_password");
+		CommandExecutor executor = new CommandExecutorImpl();
 		try {
 			System.out.println("\n[main] trying to run command cmd /C dir");
 			executor.runCommand("cmd /C dir");

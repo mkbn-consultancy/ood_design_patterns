@@ -46,8 +46,8 @@ int main()
     //..................
 
     GeneralReportVisitor report1;
-    custGrp.accept(&report1);
-
+    // custGrp.accept(&report1);
+    report1.visit(&custGrp);
     //..................
 
     auto[numItems,numOrders,numCust] = report1.getResults();
